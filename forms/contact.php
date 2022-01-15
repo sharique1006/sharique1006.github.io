@@ -1,4 +1,5 @@
 <?php 
+echo "Hello-1"
 $errors = '';
 $myemail = 'shariqueshamim001@gmail.com';//<-----Put Your email address here.
 if(empty($_POST['name'])  || 
@@ -8,6 +9,7 @@ if(empty($_POST['name'])  ||
 {
     $errors .= "\n Error: all fields are required";
 }
+echo "Hello-2"
 
 $name = $_POST['name']; 
 $email_address = $_POST['email'];
@@ -20,6 +22,7 @@ $email_address))
 {
     $errors .= "\n Error: Invalid email address";
 }
+echo "Hello-3"
 
 if( empty($errors))
 {
@@ -30,6 +33,7 @@ if( empty($errors))
   
   $headers = "From: $myemail\n"; 
   $headers .= "Reply-To: $email_address";
+  echo "Hello-4"
   
   mail($to,$email_subject,$email_body,$headers);
   //redirect to the 'thank you' page
